@@ -16,3 +16,7 @@
 !/log/.keep
 /tmp
 /vendor/node_modules
+
+/config/database.yml
+/config/secrets.yml
+/config/sidekiq.yml
