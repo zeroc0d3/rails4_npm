@@ -26,11 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-gem 'unicorn'
-
-# Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+gem 'puma', '3.11.0'
 
 ### ----- ADDONS DEPENDENCIES ----- ###
 gem 'pg'
@@ -65,11 +61,21 @@ gem 'sidekiq', '3.3.0'
 gem 'sidekiq-failures'
 
 gem 'figaro'
+
+gem 'redis'
+
+gem 'redis-store'
+
+gem 'redis-activesupport'
 ### ----- END ----- ###
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'pry-remote'
+  gem 'annotate'
 end
 
 group :development do
@@ -78,5 +84,19 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'letter_opener'
 end
 
+group :production, :staging do
+  gem 'unicorn'
+  gem 'unicorn-worker-killer'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-sidekiq' , '< 0.20.0'
+  gem 'compass-rails'
+  gem 'compass'
+end
