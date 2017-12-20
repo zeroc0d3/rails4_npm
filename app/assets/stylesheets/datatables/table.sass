@@ -1,0 +1,390 @@
+/* ========================================================================
+ * TABLE
+ * ========================================================================
+
+.table
+  margin-bottom: 0px
+  thead
+    tr th
+      background-color: #eeeeee
+      border-color: #e1e1e1 #e1e1e1 #dcdcdc
+      vertical-align: middle
+      border-width: 1px 1px 7px
+      border-style: solid
+      font-weight: 400
+      font-size: 13px
+      &:first-child
+        border-left: none
+      &:last-child
+        border-right: none
+    .sorting:after
+      margin-left: 5px
+      content: "\f0dc"
+      font-family: 'FontAwesome'
+    .sorting_asc:after
+      margin-left: 5px
+      content: "\f0dd"
+      font-family: 'FontAwesome'
+    .sorting_desc:after
+      margin-left: 5px
+      content: "\f0de"
+      font-family: 'FontAwesome'
+    .sorting_asc_disabled:after
+      margin-left: 5px
+      color: rgba(255, 255, 255, 0.3)
+      content: "\f0dd"
+      font-family: 'FontAwesome'
+    .sorting_desc_disabled:after
+      margin-left: 5px
+      color: rgba(255, 255, 255, 0.3)
+      content: "\f0de"
+      font-family: 'FontAwesome'
+  tbody tr
+    &.border-danger td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #e9573f
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &.border-success td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #8cc152
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &.border-primary td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #00b1e1
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &.border-info td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #63d3e9
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &.border-warning td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #f6bb42
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &.border-inverse td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #2a2a2a
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &.border-lilac td
+      background: inherit !important
+      &:first-child
+        position: relative
+        padding-left: 10px
+        &:before
+          border-left: 3px solid #906094
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: -1px
+          bottom: 0
+    &:first-child td:first-child:before
+      top: 2px !important
+    td
+      background-color: #FBFBFB
+      > a
+        margin-right: 5px
+        i
+          color: #636E7B
+      .btn
+        &.btn-success i, &.btn-danger i, &.btn-primary i, &.btn-info i, &.btn-warning i
+          color: white
+  tfoot tr th
+    vertical-align: middle
+    background-color: #eeeeee
+    border-width: 7px 1px 1px
+    border-style: solid
+    border-color: #dcdcdc #e1e1e1 #e1e1e1
+    font-weight: 400
+    font-size: 13px
+    border-bottom: none
+    &:first-child
+      border-left: none
+    &:last-child
+      border-right: none
+  &.table-striped tbody tr:nth-child(odd)
+    td, th
+      background-color: #f6f6f6
+
+table
+  &.table-bordered tbody tr td:first-child:before
+    left: -2px !important
+  &.dataTable thead
+    .sorting, .sorting_asc, .sorting_desc, .sorting_asc_disabled, .sorting_desc_disabled
+      background: none
+
+.table-primary
+  thead tr th
+    background-color: #00b1e1 !important
+    border-color: #00c5fb #00c5fb #0095bd !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #24d0ff !important
+    color: white
+    border-bottom: 1px solid #48d8ff !important
+  tfoot tr th
+    background-color: #00b1e1 !important
+    border-color: #0095bd #00c5fb #00c5fb !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #00b1e1
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #48d8ff !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-success
+  thead tr th
+    background-color: #8cc152 !important
+    border-color: #98c865 #98c865 #7ab03f !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #acd283 !important
+    color: white
+    border-bottom: 1px solid #bedc9d !important
+  tfoot tr th
+    background-color: #8cc152 !important
+    border-color: #7ab03f #98c865 #98c865 !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #8cc152
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #bedc9d !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-info
+  thead tr th
+    background-color: #63d3e9 !important
+    border-color: #79d9ec #79d9ec #44cae5 !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #9de3f1 !important
+    color: white
+    border-bottom: 1px solid #bcecf6 !important
+  tfoot tr th
+    background-color: #63d3e9 !important
+    border-color: #44cae5 #79d9ec #79d9ec !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #63d3e9
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #bcecf6 !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-warning
+  thead tr th
+    background-color: #f6bb42 !important
+    border-color: #f7c45a #f7c45a #f4af20 !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #f9d281 !important
+    color: white
+    border-bottom: 1px solid #fbdea3 !important
+  tfoot tr th
+    background-color: #f6bb42 !important
+    border-color: #f4af20 #f7c45a #f7c45a !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #f6bb42
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #fbdea3 !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-danger
+  thead tr th
+    background-color: #e9573f !important
+    border-color: #ec6b56 #ec6b56 #e53b1f !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #f08b7a !important
+    color: white
+    border-bottom: 1px solid #f3a79b !important
+  tfoot tr th
+    background-color: #e9573f !important
+    border-color: #e53b1f #ec6b56 #ec6b56 !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #e9573f
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #f3a79b !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-lilac
+  thead tr th
+    background-color: #906094 !important
+    border-color: #9c6da0 #9c6da0 #7b527e !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #ad86b0 !important
+    color: white
+    border-bottom: 1px solid #bc9cbe !important
+  tfoot tr th
+    background-color: #906094 !important
+    border-color: #7b527e #9c6da0 #9c6da0 !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #906094
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #bc9cbe !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-inverse
+  thead tr th
+    background-color: #2a2a2a !important
+    border-color: #373737 #373737 #181818 !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #4b4b4b !important
+    color: white
+    border-bottom: 1px solid #5d5d5d !important
+  tfoot tr th
+    background-color: #2a2a2a !important
+    border-color: #181818 #373737 #373737 !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #2a2a2a
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #5d5d5d !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white
+
+.table-teal
+  thead tr th
+    background-color: #37bc9b !important
+    border-color: #44c8a8 #44c8a8 #2fa084 !important
+    color: #fff
+  tfoot tr th
+    background-color: #37bc9b !important
+    border-color: #2fa084 #31a88b #31a88b !important
+
+.table-responsive.rounded
+  overflow: auto !important
+
+.table-middle tr
+  th, td
+    vertical-align: middle !important
+
+.table-no-border tr td
+  border-top: none !important
+
+/* ========================================================================
+ * TABLE THEME
+ * ========================================================================
+
+.table-theme
+  thead tr th
+    background-color: #9fb478 !important
+    border-color: #abbd88 #abbd88 #8fa761 !important
+    color: #fff
+  tbody tr td.sorting_1
+    background: #bdcca3 !important
+    color: white
+    border-bottom: 1px solid #ced8ba !important
+  tfoot tr th
+    background-color: #9fb478 !important
+    border-color: #8fa761 #abbd88 #abbd88 !important
+    color: #fff
+  &.table-bordered
+    border: 1px solid #9fb478
+    thead tr th:first-child, tfoot tr th:first-child, thead tr th:last-child, tfoot tr th:last-child
+      -webkit-border-radius: 0px !important
+      -moz-border-radius: 0px !important
+      border-radius: 0px !important
+    tbody tr td.sorting_1
+      border-right: 1px solid #ced8ba !important
+  table.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander:before, &.detail-show > td span.responsiveExpander:before
+      color: white

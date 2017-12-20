@@ -1,0 +1,108 @@
+/* ========================================================================
+ * DATATABLE
+ * =======================================================================
+
+.table-default.table.dataTable thead
+  .sorting, .sorting_asc, .sorting_desc, .sorting_asc_disabled, .sorting_desc_disabled
+    background: #EEE !important
+
+table
+  &.dataTable
+    thead tr th, tfoot tr th
+      padding-left: 10px
+      padding-right: 10px
+    tbody tr td
+      padding-left: 10px
+      padding-right: 10px
+      &.sorting_1
+        background: #EEEEEE
+        border-bottom: 1px solid #DDD
+  &.has-columns-hidden > tbody > tr
+    > td > span.responsiveExpander
+      vertical-align: middle
+      &:before
+        font-family: "fontawesome"
+        content: "\f0fe"
+        margin-right: 10px
+        cursor: pointer
+        font-size: 20px
+    &.detail-show > td span.responsiveExpander
+      vertical-align: middle
+      &:before
+        font-family: "fontawesome"
+        content: "\f146"
+        margin-right: 10px
+        cursor: pointer
+        font-size: 20px
+
+div
+  &.dataTables_filter input
+    margin-left: 10px
+  &.dataTables_length select
+    margin-right: 10px
+
+.dataTable thead tr th:first-child
+  min-width: 150px
+
+table.dataTable th.dataTables_empty, td.dataTables_empty
+  padding: 30px !important
+  text-align: center
+
+table.dataTable th.dataTables_empty:before, td.dataTables_empty:before
+  font-family: "fontawesome"
+  content: "\f119"
+  display: block
+  font-size: 110px
+  margin-bottom: 5px
+
+@media (max-width: 768px)
+  div
+    &.dataTables_length
+      label
+        width: 93%
+      select
+        display: inline-block
+    &.dataTables_filter
+      label
+        line-height: 30px
+      input
+        display: inline-block
+        float: right
+        width: 13em !important
+        margin-right: 0px
+    &.dataTables_info
+      text-align: center
+      margin-bottom: 10px
+    &.dataTables_paginate
+      float: none !important
+      text-align: center
+
+@media (max-width: 480px)
+  table.dataTable
+    thead tr th:first-child
+      -moz-border-radius: 3px 3px 0px 0px !important
+      -webkit-border-radius: 3px
+      border-radius: 3px 3px 0px 0px !important
+    tfoot tr th:first-child
+      -moz-border-radius: 0px 0px 3px 3px !important
+      -webkit-border-radius: 0px
+      border-radius: 0px 0px 3px 3px !important
+  .dataTables_wrapper .col-xs-6
+    width: 100%
+  div.dataTables_length label
+    display: none
+
+@media (max-width: 360px)
+  .dataTables_paginate .pagination
+    .previous
+      display: none
+    > li:nth-child(2) a
+      -moz-border-radius: 3px 0px 0px 3px
+      -webkit-border-radius: 3px
+      border-radius: 3px 0px 0px 3px
+  div.dataTables_filter input
+    width: 19em
+
+@media (max-width: 320px)
+  div.dataTables_filter input
+    width: 16em !important

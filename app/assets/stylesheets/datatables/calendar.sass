@@ -1,0 +1,99 @@
+/* ========================================================================
+ * CALENDAR
+ * ========================================================================
+
+.calendar-toolbar
+  border-bottom: 5px dotted #DDD
+  padding-bottom: 20px
+  margin-bottom: 15px
+
+.cal-month-box, .cal-year-box, .cal-week-box
+  border: none !important
+
+.cal-month-box, .cal-week-box
+  background-color: white
+
+.cal-year-box
+  background-color: white
+  .row-fluid
+    border-bottom: 1px solid #f7f7f7 !important
+
+.cal-month-box .cal-row-fluid
+  border-bottom: 1px solid #f7f7f7 !important
+
+.cal-year-box [class*="span"], .cal-month-box [class*="cal-cell"]
+  border-right: 1px solid #f7f7f7 !important
+
+.cal-year-box .row-fluid [class*="span"]:last-child
+  border-right: none !important
+
+.cal-month-box
+  .cal-row-fluid [class*="cal-cell"]:last-child
+    border-right: none !important
+  span[data-cal-date]
+    font-size: 25px
+
+.cal-month-day span[data-cal-date]
+  font-size: 25px
+
+.cal-month-box [data-cal-row="-day1"] .cal-day-weekend span[data-cal-date], .cal-month-day [data-cal-row="-day1"] .cal-day-weekend span[data-cal-date]
+  color: #E9573F
+
+.cal-year-box
+  color: #2A2A2A
+  .col-md-3
+    width: 25%
+    span[data-cal-date]
+      margin-right: auto !important
+
+#cal-week-box
+  display: none !important
+
+#cal-day-box
+  .day-highlight
+    border: none !important
+  .day-event
+    margin-left: 23px !important
+
+#cal-day-panel #cal-day-panel-hour .cal-day-hour .cal-day-hour-part
+  .span1
+    padding-top: 4px
+  b:before
+    font-family: "fontawesome"
+    content: "\f017"
+    margin-right: 5px
+
+#cal-slide-content
+  background-color: #F5F5F5 !important
+  -moz-box-shadow: none !important
+  -webkit-box-shadow: none !important
+  box-shadow: none !important
+  color: #999
+  border-bottom: 1px solid #DDD
+  background-image: none !important
+  a.event-item
+    color: #999
+
+#cal-day-tick
+  background-color: #F5F5F5
+  display: none
+
+#cal-slide-tick
+  display: none !important
+
+.cal-row-head
+  [class*="cal-cell"]
+    padding: 10px 3px
+    font-weight: 400
+    &:first-child
+      padding: 10px 0px
+      font-weight: 400
+  + .cal-day-hour
+    padding-top: 15px
+    padding-bottom: 10px
+    padding-right: 15px
+    [class*="col-xs-"]
+      padding-left: 0px
+      padding-right: 0px
+      &.span1
+        text-align: center

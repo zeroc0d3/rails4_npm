@@ -1,0 +1,2029 @@
+/* ========================================================================
+ * BUTTON
+ * ========================================================================
+
+.btn
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  -ms-transition: all 0.3s
+  -o-transition: all 0.3s
+  transition: all 0.3s
+  position: relative
+  z-index: 1
+  background-color: transparent
+  font-weight: 300
+  -webkit-border-radius: 0px
+  -moz-border-radius: 0px
+  border-radius: 0px
+  &:after
+    content: ' '
+    position: absolute
+    z-index: -1
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    -ms-transition: all 0.3s
+    -o-transition: all 0.3s
+    transition: all 0.3s
+    -webkit-border-radius: 0px
+    -moz-border-radius: 0px
+    border-radius: 0px
+  &:before
+    speak: none
+    text-transform: none
+    position: relative
+    -webkit-font-smoothing: antialiased
+
+.btn-default
+  color: #999 !important
+  border-color: #CCC !important
+  background-color: #eeeeee
+  border-color: #eeeeee
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #e1e1e1
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-default
+    background-color: #eeeeee
+    border-color: #e1e1e1
+    color: white
+  &.btn-alt
+    background-color: #e1e1e1
+    border: 1px solid #eeeeee
+    &:hover
+      background-color: #d5d5d5
+  &.btn-stroke
+    border: 1px double #eeeeee
+    background-color: transparent
+    color: #eeeeee
+    &:hover
+      background-color: #e1e1e1
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #eeeeee
+  &.btn-dashed
+    border: 1px dashed #eeeeee
+  &.btn-dotted
+    border: 1px dotted #eeeeee
+  &.btn-double
+    border: 4px double #eeeeee
+  &.btn-inset
+    border: 4px inset #eeeeee
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #d5d5d5
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #d5d5d5
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #d5d5d5
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #d5d5d5
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #d5d5d5
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #eeeeee
+    box-shadow: 0 6px #d5d5d5
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #d5d5d5
+      top: 2px
+    &:active
+      box-shadow: 0 0 #d5d5d5
+      top: 6px
+  &.btn-pushright
+    background: #eeeeee
+    box-shadow: 6px 0 #d5d5d5
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #d5d5d5
+      left: 2px
+    &:active
+      box-shadow: 0 0 #d5d5d5
+      left: 6px
+
+.btn-primary
+  background-color: #00b1e1
+  border-color: #00b1e1
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #009dc8
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-primary
+    background-color: #00b1e1
+    border-color: #009dc8
+    color: white
+  &.btn-alt
+    background-color: #009dc8
+    border: 1px solid #00b1e1
+    &:hover
+      background-color: #0089ae
+  &.btn-stroke
+    border: 1px double #00b1e1
+    background-color: transparent
+    color: #00b1e1
+    &:hover
+      background-color: #009dc8
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #00b1e1
+  &.btn-dashed
+    border: 1px dashed #00b1e1
+  &.btn-dotted
+    border: 1px dotted #00b1e1
+  &.btn-double
+    border: 4px double #00b1e1
+  &.btn-inset
+    border: 4px inset #00b1e1
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #0089ae
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #0089ae
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #0089ae
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #0089ae
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #0089ae
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #00b1e1
+    box-shadow: 0 6px #0089ae
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #0089ae
+      top: 2px
+    &:active
+      box-shadow: 0 0 #0089ae
+      top: 6px
+  &.btn-pushright
+    background: #00b1e1
+    box-shadow: 6px 0 #0089ae
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #0089ae
+      left: 2px
+    &:active
+      box-shadow: 0 0 #0089ae
+      left: 6px
+
+.btn-success
+  background-color: #8cc152
+  border-color: #8cc152
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #7fb842
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-success
+    background-color: #8cc152
+    border-color: #7fb842
+    color: white
+  &.btn-alt
+    background-color: #7fb842
+    border: 1px solid #8cc152
+    &:hover
+      background-color: #72a53b
+  &.btn-stroke
+    border: 1px double #8cc152
+    background-color: transparent
+    color: #8cc152
+    &:hover
+      background-color: #7fb842
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #8cc152
+  &.btn-dashed
+    border: 1px dashed #8cc152
+  &.btn-dotted
+    border: 1px dotted #8cc152
+  &.btn-double
+    border: 4px double #8cc152
+  &.btn-inset
+    border: 4px inset #8cc152
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #72a53b
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #72a53b
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #72a53b
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #72a53b
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #72a53b
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #8cc152
+    box-shadow: 0 6px #72a53b
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #72a53b
+      top: 2px
+    &:active
+      box-shadow: 0 0 #72a53b
+      top: 6px
+  &.btn-pushright
+    background: #8cc152
+    box-shadow: 6px 0 #72a53b
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #72a53b
+      left: 2px
+    &:active
+      box-shadow: 0 0 #72a53b
+      left: 6px
+
+.btn-info
+  background-color: #63d3e9
+  border-color: #63d3e9
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #4dcde6
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-info
+    background-color: #63d3e9
+    border-color: #4dcde6
+    color: white
+  &.btn-alt
+    background-color: #4dcde6
+    border: 1px solid #63d3e9
+    &:hover
+      background-color: #36c6e3
+  &.btn-stroke
+    border: 1px double #63d3e9
+    background-color: transparent
+    color: #63d3e9
+    &:hover
+      background-color: #4dcde6
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #63d3e9
+  &.btn-dashed
+    border: 1px dashed #63d3e9
+  &.btn-dotted
+    border: 1px dotted #63d3e9
+  &.btn-double
+    border: 4px double #63d3e9
+  &.btn-inset
+    border: 4px inset #63d3e9
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #36c6e3
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #36c6e3
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #36c6e3
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #36c6e3
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #36c6e3
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #63d3e9
+    box-shadow: 0 6px #36c6e3
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #36c6e3
+      top: 2px
+    &:active
+      box-shadow: 0 0 #36c6e3
+      top: 6px
+  &.btn-pushright
+    background: #63d3e9
+    box-shadow: 6px 0 #36c6e3
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #36c6e3
+      left: 2px
+    &:active
+      box-shadow: 0 0 #36c6e3
+      left: 6px
+
+.btn-warning
+  background-color: #f6bb42
+  border-color: #f6bb42
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #f5b22a
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-warning
+    background-color: #f6bb42
+    border-color: #f5b22a
+    color: white
+  &.btn-alt
+    background-color: #f5b22a
+    border: 1px solid #f6bb42
+    &:hover
+      background-color: #f4a911
+  &.btn-stroke
+    border: 1px double #f6bb42
+    background-color: transparent
+    color: #f6bb42
+    &:hover
+      background-color: #f5b22a
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #f6bb42
+  &.btn-dashed
+    border: 1px dashed #f6bb42
+  &.btn-dotted
+    border: 1px dotted #f6bb42
+  &.btn-double
+    border: 4px double #f6bb42
+  &.btn-inset
+    border: 4px inset #f6bb42
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #f4a911
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #f4a911
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #f4a911
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #f4a911
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #f4a911
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #f6bb42
+    box-shadow: 0 6px #f4a911
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #f4a911
+      top: 2px
+    &:active
+      box-shadow: 0 0 #f4a911
+      top: 6px
+  &.btn-pushright
+    background: #f6bb42
+    box-shadow: 6px 0 #f4a911
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #f4a911
+      left: 2px
+    &:active
+      box-shadow: 0 0 #f4a911
+      left: 6px
+
+.btn-danger
+  background-color: #e9573f
+  border-color: #e9573f
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #e64328
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-danger
+    background-color: #e9573f
+    border-color: #e64328
+    color: white
+  &.btn-alt
+    background-color: #e64328
+    border: 1px solid #e9573f
+    &:hover
+      background-color: #dc3519
+  &.btn-stroke
+    border: 1px double #e9573f
+    background-color: transparent
+    color: #e9573f
+    &:hover
+      background-color: #e64328
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #e9573f
+  &.btn-dashed
+    border: 1px dashed #e9573f
+  &.btn-dotted
+    border: 1px dotted #e9573f
+  &.btn-double
+    border: 4px double #e9573f
+  &.btn-inset
+    border: 4px inset #e9573f
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #dc3519
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #dc3519
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #dc3519
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #dc3519
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #dc3519
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #e9573f
+    box-shadow: 0 6px #dc3519
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #dc3519
+      top: 2px
+    &:active
+      box-shadow: 0 0 #dc3519
+      top: 6px
+  &.btn-pushright
+    background: #e9573f
+    box-shadow: 6px 0 #dc3519
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #dc3519
+      left: 2px
+    &:active
+      box-shadow: 0 0 #dc3519
+      left: 6px
+
+.btn-lilac
+  background-color: #906094
+  border-color: #906094
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #815685
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-lilac
+    background-color: #906094
+    border-color: #815685
+    color: white
+  &.btn-alt
+    background-color: #815685
+    border: 1px solid #906094
+    &:hover
+      background-color: #724c75
+  &.btn-stroke
+    border: 1px double #906094
+    background-color: transparent
+    color: #906094
+    &:hover
+      background-color: #815685
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #906094
+  &.btn-dashed
+    border: 1px dashed #906094
+  &.btn-dotted
+    border: 1px dotted #906094
+  &.btn-double
+    border: 4px double #906094
+  &.btn-inset
+    border: 4px inset #906094
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #724c75
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #724c75
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #724c75
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #724c75
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #724c75
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #906094
+    box-shadow: 0 6px #724c75
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #724c75
+      top: 2px
+    &:active
+      box-shadow: 0 0 #724c75
+      top: 6px
+  &.btn-pushright
+    background: #906094
+    box-shadow: 6px 0 #724c75
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #724c75
+      left: 2px
+    &:active
+      box-shadow: 0 0 #724c75
+      left: 6px
+
+.btn-inverse
+  background-color: #2a2a2a
+  border-color: #2a2a2a
+  color: white
+  &:hover, &:focus, &:active, &.active, &[disabled], &.disabled
+    background-color: #1d1d1d
+    border-color: transparent
+    color: white
+  &.dropdown-toggle.btn-inverse
+    background-color: #2a2a2a
+    border-color: #1d1d1d
+    color: white
+  &.btn-alt
+    background-color: #1d1d1d
+    border: 1px solid #2a2a2a
+    &:hover
+      background-color: #101010
+  &.btn-stroke
+    border: 1px double #2a2a2a
+    background-color: transparent
+    color: #2a2a2a
+    &:hover
+      background-color: #1d1d1d
+      border-color: transparent
+      color: white
+  &.btn-solid
+    border: 1px solid #2a2a2a
+  &.btn-dashed
+    border: 1px dashed #2a2a2a
+  &.btn-dotted
+    border: 1px dotted #2a2a2a
+  &.btn-double
+    border: 4px double #2a2a2a
+  &.btn-inset
+    border: 4px inset #2a2a2a
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+  &.btn-slidedown
+    &:after
+      width: 100%
+      height: 0
+      top: 0
+      left: 0
+      background-color: #101010
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      height: 100%
+  &.btn-slideright
+    &:after
+      width: 0%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: #101010
+      z-index: -1
+    &:hover, &:active
+      color: white
+    &:hover:after, &:active:after
+      width: 100%
+  &.btn-expand
+    &:after
+      width: 0
+      height: 103%
+      top: 50%
+      left: 50%
+      background-color: #101010
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      width: 90%
+      opacity: 1
+    &:active:after
+      width: 101%
+      opacity: 1
+  &.btn-rotate
+    overflow: hidden
+    &:after
+      width: 100%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #101010
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    &:hover:after
+      height: 260%
+      opacity: 1
+    &:active:after
+      height: 400%
+      opacity: 1
+  &.btn-open
+    overflow: hidden
+    &:after
+      width: 101%
+      height: 0
+      top: 50%
+      left: 50%
+      background-color: #101010
+      opacity: 0
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -moz-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      -o-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+    &:hover:after
+      height: 75%
+      opacity: 1
+    &:active:after
+      height: 130%
+      opacity: 1
+  &.btn-push
+    background: #2a2a2a
+    box-shadow: 0 6px #101010
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 0 4px #101010
+      top: 2px
+    &:active
+      box-shadow: 0 0 #101010
+      top: 6px
+  &.btn-pushright
+    background: #2a2a2a
+    box-shadow: 6px 0 #101010
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+    &:hover
+      box-shadow: 4px 0 #101010
+      left: 2px
+    &:active
+      box-shadow: 0 0 #101010
+      left: 6px
+
+.btn-teal
+  color: #FFF
+  background-color: #37bc9b
+  border-color: #31a88b
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #31a88b
+  &.btn-stroke
+    border: 1px double #37bc9b
+    background-color: transparent
+    color: #37bc9b
+    &:hover
+      color: #FFF !important
+      background-color: #31a88b
+  &.btn-solid
+    border: 1px solid #37bc9b
+  &.btn-dashed
+    border: 1px dashed #37bc9b
+  &.btn-dotted
+    border: 1px dotted #37bc9b
+  &.btn-double
+    border: 4px double #37bc9b
+  &.btn-inset
+    border: 4px inset #37bc9b
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-bitbucket
+  color: #FFF
+  background-color: #205081
+  border-color: #205081
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #1b436d
+  &.btn-stroke
+    border: 1px double #205081
+    background-color: transparent
+    color: #205081
+    &:hover
+      color: #FFF !important
+      background-color: #1b436d
+  &.btn-solid
+    border: 1px solid #205081
+  &.btn-dashed
+    border: 1px dashed #205081
+  &.btn-dotted
+    border: 1px dotted #205081
+  &.btn-double
+    border: 4px double #205081
+  &.btn-inset
+    border: 4px inset #205081
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-behance
+  color: #FFF
+  background-color: #053eff
+  border-color: #053eff
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #0035eb
+  &.btn-stroke
+    border: 1px double #053eff
+    background-color: transparent
+    color: #053eff
+    &:hover
+      color: #FFF !important
+      background-color: #0035eb
+  &.btn-solid
+    border: 1px solid #053eff
+  &.btn-dashed
+    border: 1px dashed #053eff
+  &.btn-dotted
+    border: 1px dotted #053eff
+  &.btn-double
+    border: 4px double #053eff
+  &.btn-inset
+    border: 4px inset #053eff
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-delicious
+  color: #FFF
+  background-color: #205cc0
+  border-color: #205cc0
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #1c52aa
+  &.btn-stroke
+    border: 1px double #205cc0
+    background-color: transparent
+    color: #205cc0
+    &:hover
+      color: #FFF !important
+      background-color: #1c52aa
+  &.btn-solid
+    border: 1px solid #205cc0
+  &.btn-dashed
+    border: 1px dashed #205cc0
+  &.btn-dotted
+    border: 1px dotted #205cc0
+  &.btn-double
+    border: 4px double #205cc0
+  &.btn-inset
+    border: 4px inset #205cc0
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-dribbble
+  color: #FFF
+  background-color: #ea4c89
+  border-color: #ea4c89
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #e7357a
+  &.btn-stroke
+    border: 1px double #ea4c89
+    background-color: transparent
+    color: #ea4c89
+    &:hover
+      color: #FFF !important
+      background-color: #e7357a
+  &.btn-solid
+    border: 1px solid #ea4c89
+  &.btn-dashed
+    border: 1px dashed #ea4c89
+  &.btn-dotted
+    border: 1px dotted #ea4c89
+  &.btn-double
+    border: 4px double #ea4c89
+  &.btn-inset
+    border: 4px inset #ea4c89
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-facebook
+  color: #FFF
+  background-color: #3b5998
+  border-color: #3b5998
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #344e86
+  &.btn-stroke
+    border: 1px double #3b5998
+    background-color: transparent
+    color: #3b5998
+    &:hover
+      color: #FFF !important
+      background-color: #344e86
+  &.btn-solid
+    border: 1px solid #3b5998
+  &.btn-dashed
+    border: 1px dashed #3b5998
+  &.btn-dotted
+    border: 1px dotted #3b5998
+  &.btn-double
+    border: 4px double #3b5998
+  &.btn-inset
+    border: 4px inset #3b5998
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-flickr
+  color: #FFF
+  background-color: #ff0084
+  border-color: #ff0084
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #e60077
+  &.btn-stroke
+    border: 1px double #ff0084
+    background-color: transparent
+    color: #ff0084
+    &:hover
+      color: #FFF !important
+      background-color: #e60077
+  &.btn-solid
+    border: 1px solid #ff0084
+  &.btn-dashed
+    border: 1px dashed #ff0084
+  &.btn-dotted
+    border: 1px dotted #ff0084
+  &.btn-double
+    border: 4px double #ff0084
+  &.btn-inset
+    border: 4px inset #ff0084
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-foursquare
+  color: #FFF
+  background-color: #25a0ca
+  border-color: #25a0ca
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #218fb4
+  &.btn-stroke
+    border: 1px double #25a0ca
+    background-color: transparent
+    color: #25a0ca
+    &:hover
+      color: #FFF !important
+      background-color: #218fb4
+  &.btn-solid
+    border: 1px solid #25a0ca
+  &.btn-dashed
+    border: 1px dashed #25a0ca
+  &.btn-dotted
+    border: 1px dotted #25a0ca
+  &.btn-double
+    border: 4px double #25a0ca
+  &.btn-inset
+    border: 4px inset #25a0ca
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-googleplus
+  color: #FFF
+  background-color: #db4a39
+  border-color: #db4a39
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #d43927
+  &.btn-stroke
+    border: 1px double #db4a39
+    background-color: transparent
+    color: #db4a39
+    &:hover
+      color: #FFF !important
+      background-color: #d43927
+  &.btn-solid
+    border: 1px solid #db4a39
+  &.btn-dashed
+    border: 1px dashed #db4a39
+  &.btn-dotted
+    border: 1px dotted #db4a39
+  &.btn-double
+    border: 4px double #db4a39
+  &.btn-inset
+    border: 4px inset #db4a39
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-instagram
+  color: #FFF
+  background-color: #3f729b
+  border-color: #3f729b
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #386589
+  &.btn-stroke
+    border: 1px double #3f729b
+    background-color: transparent
+    color: #3f729b
+    &:hover
+      color: #FFF !important
+      background-color: #386589
+  &.btn-solid
+    border: 1px solid #3f729b
+  &.btn-dashed
+    border: 1px dashed #3f729b
+  &.btn-dotted
+    border: 1px dotted #3f729b
+  &.btn-double
+    border: 4px double #3f729b
+  &.btn-inset
+    border: 4px inset #3f729b
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-linkedin
+  color: #FFF
+  background-color: #0e76a8
+  border-color: #0e76a8
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #0c6590
+  &.btn-stroke
+    border: 1px double #0e76a8
+    background-color: transparent
+    color: #0e76a8
+    &:hover
+      color: #FFF !important
+      background-color: #0c6590
+  &.btn-solid
+    border: 1px solid #0e76a8
+  &.btn-dashed
+    border: 1px dashed #0e76a8
+  &.btn-dotted
+    border: 1px dotted #0e76a8
+  &.btn-double
+    border: 4px double #0e76a8
+  &.btn-inset
+    border: 4px inset #0e76a8
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-path
+  color: #FFF
+  background-color: #e41f11
+  border-color: #e41f11
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #cc1c0f
+  &.btn-stroke
+    border: 1px double #e41f11
+    background-color: transparent
+    color: #e41f11
+    &:hover
+      color: #FFF !important
+      background-color: #cc1c0f
+  &.btn-solid
+    border: 1px solid #e41f11
+  &.btn-dashed
+    border: 1px dashed #e41f11
+  &.btn-dotted
+    border: 1px dotted #e41f11
+  &.btn-double
+    border: 4px double #e41f11
+  &.btn-inset
+    border: 4px inset #e41f11
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-pinterest
+  color: #FFF
+  background-color: #c8232c
+  border-color: #c8232c
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #b21f27
+  &.btn-stroke
+    border: 1px double #c8232c
+    background-color: transparent
+    color: #c8232c
+    &:hover
+      color: #FFF !important
+      background-color: #b21f27
+  &.btn-solid
+    border: 1px solid #c8232c
+  &.btn-dashed
+    border: 1px dashed #c8232c
+  &.btn-dotted
+    border: 1px dotted #c8232c
+  &.btn-double
+    border: 4px double #c8232c
+  &.btn-inset
+    border: 4px inset #c8232c
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-rss
+  color: #FFF
+  background-color: #ee802f
+  border-color: #ee802f
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #ec7217
+  &.btn-stroke
+    border: 1px double #ee802f
+    background-color: transparent
+    color: #ee802f
+    &:hover
+      color: #FFF !important
+      background-color: #ec7217
+  &.btn-solid
+    border: 1px solid #ee802f
+  &.btn-dashed
+    border: 1px dashed #ee802f
+  &.btn-dotted
+    border: 1px dotted #ee802f
+  &.btn-double
+    border: 4px double #ee802f
+  &.btn-inset
+    border: 4px inset #ee802f
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-skype
+  color: #FFF
+  background-color: #00aff0
+  border-color: #00aff0
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #009cd7
+  &.btn-stroke
+    border: 1px double #00aff0
+    background-color: transparent
+    color: #00aff0
+    &:hover
+      color: #FFF !important
+      background-color: #009cd7
+  &.btn-solid
+    border: 1px solid #00aff0
+  &.btn-dashed
+    border: 1px dashed #00aff0
+  &.btn-dotted
+    border: 1px dotted #00aff0
+  &.btn-double
+    border: 4px double #00aff0
+  &.btn-inset
+    border: 4px inset #00aff0
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-soundcloud
+  color: #FFF
+  background-color: #ff7700
+  border-color: #ff7700
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #e66b00
+  &.btn-stroke
+    border: 1px double #ff7700
+    background-color: transparent
+    color: #ff7700
+    &:hover
+      color: #FFF !important
+      background-color: #e66b00
+  &.btn-solid
+    border: 1px solid #ff7700
+  &.btn-dashed
+    border: 1px dashed #ff7700
+  &.btn-dotted
+    border: 1px dotted #ff7700
+  &.btn-double
+    border: 4px double #ff7700
+  &.btn-inset
+    border: 4px inset #ff7700
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-tumblr
+  color: #FFF
+  background-color: #34526f
+  border-color: #34526f
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #2c455e
+  &.btn-stroke
+    border: 1px double #34526f
+    background-color: transparent
+    color: #34526f
+    &:hover
+      color: #FFF !important
+      background-color: #2c455e
+  &.btn-solid
+    border: 1px solid #34526f
+  &.btn-dashed
+    border: 1px dashed #34526f
+  &.btn-dotted
+    border: 1px dotted #34526f
+  &.btn-double
+    border: 4px double #34526f
+  &.btn-inset
+    border: 4px inset #34526f
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-twitter
+  color: #FFF
+  background-color: #00a0d1
+  border-color: #00a0d1
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #008cb8
+  &.btn-stroke
+    border: 1px double #00a0d1
+    background-color: transparent
+    color: #00a0d1
+    &:hover
+      color: #FFF !important
+      background-color: #008cb8
+  &.btn-solid
+    border: 1px solid #00a0d1
+  &.btn-dashed
+    border: 1px dashed #00a0d1
+  &.btn-dotted
+    border: 1px dotted #00a0d1
+  &.btn-double
+    border: 4px double #00a0d1
+  &.btn-inset
+    border: 4px inset #00a0d1
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-vimeo
+  color: #FFF
+  background-color: #86c9ef
+  border-color: #86c9ef
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #6fbfec
+  &.btn-stroke
+    border: 1px double #86c9ef
+    background-color: transparent
+    color: #86c9ef
+    &:hover
+      color: #FFF !important
+      background-color: #6fbfec
+  &.btn-solid
+    border: 1px solid #86c9ef
+  &.btn-dashed
+    border: 1px dashed #86c9ef
+  &.btn-dotted
+    border: 1px dotted #86c9ef
+  &.btn-double
+    border: 4px double #86c9ef
+  &.btn-inset
+    border: 4px inset #86c9ef
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-wordpress
+  color: #FFF
+  background-color: #21759b
+  border-color: #21759b
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #1d6586
+  &.btn-stroke
+    border: 1px double #21759b
+    background-color: transparent
+    color: #21759b
+    &:hover
+      color: #FFF !important
+      background-color: #1d6586
+  &.btn-solid
+    border: 1px solid #21759b
+  &.btn-dashed
+    border: 1px dashed #21759b
+  &.btn-dotted
+    border: 1px dotted #21759b
+  &.btn-double
+    border: 4px double #21759b
+  &.btn-inset
+    border: 4px inset #21759b
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-yahoo
+  color: #FFF
+  background-color: #720e9e
+  border-color: #720e9e
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #610c87
+  &.btn-stroke
+    border: 1px double #720e9e
+    background-color: transparent
+    color: #720e9e
+    &:hover
+      color: #FFF !important
+      background-color: #610c87
+  &.btn-solid
+    border: 1px solid #720e9e
+  &.btn-dashed
+    border: 1px dashed #720e9e
+  &.btn-dotted
+    border: 1px dotted #720e9e
+  &.btn-double
+    border: 4px double #720e9e
+  &.btn-inset
+    border: 4px inset #720e9e
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-youtube
+  color: #FFF
+  background-color: #c4302b
+  border-color: #c4302b
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1)
+  &:hover, &:focus, &:active
+    color: #FFF !important
+    background-color: #af2b26
+  &.btn-stroke
+    border: 1px double #c4302b
+    background-color: transparent
+    color: #c4302b
+    &:hover
+      color: #FFF !important
+      background-color: #af2b26
+  &.btn-solid
+    border: 1px solid #c4302b
+  &.btn-dashed
+    border: 1px dashed #c4302b
+  &.btn-dotted
+    border: 1px dotted #c4302b
+  &.btn-double
+    border: 4px double #c4302b
+  &.btn-inset
+    border: 4px inset #c4302b
+  &.btn-circle
+    padding-left: 0
+    padding-right: 0
+    width: 34px
+    -webkit-border-radius: 50% 50% 50% 50%
+    -moz-border-radius: 50% 50% 50% 50%
+    border-radius: 50% 50% 50% 50%
+
+.btn-icon-stacked
+  text-align: left
+  padding: 10px 10px 10px 45px
+  position: relative
+  &:focus, &:active
+    color: white
+  i
+    display: block
+    position: absolute
+    left: 15px
+    top: 15px
+  span
+    display: block
+    font-size: 13px
+    line-height: normal
+
+.btn-compose-email
+  padding: 10px 0px
+  margin-bottom: 20px
+
+.btn-group-vertical > .btn
+  &.rounded
+    &:first-child:not(:last-child)
+      -webkit-border-radius: 3px 3px 0px 0px
+      -moz-border-radius: 3px 3px 0px 0px
+      border-radius: 3px 3px 0px 0px
+    &:last-child:not(:first-child)
+      -webkit-border-radius: 0px 0px 3px 3px
+      -moz-border-radius: 0px 0px 3px 3px
+      border-radius: 0px 0px 3px 3px
+  &:first-child:not(:last-child), &:last-child:not(:first-child)
+    -webkit-border-radius: 0px
+    -moz-border-radius: 0px
+    border-radius: 0px
