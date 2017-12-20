@@ -5,21 +5,24 @@ default: &default
   pool: 5
   host: 127.0.0.1
   port: 5432
-  username: user
+  username: postgres
   password: 
 
 development:
   <<: *default
-  database: rails4_development
+  database: 
+
 test:
   <<: *default
-  database: rails4_test
+  database: 
+
 staging:
   <<: *default
-  database: rails4_staging
+  database: 
+
 production:
   <<: *default
-  database: rails4_production
+  database: 
 
 
 ### SQLite 3 ###
@@ -27,12 +30,15 @@ production:
 #   adapter: sqlite3
 #   pool: 5
 #   timeout: 5000
+
 # development:
 #   <<: *default
 #   database: db/development.sqlite3
+
 # test:
 #   <<: *default
 #   database: db/test.sqlite3
+
 # production:
 #   <<: *default
 #   database: db/production.sqlite3
