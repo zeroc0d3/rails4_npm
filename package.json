@@ -30,15 +30,21 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.1",
+    "gulp-concat": "^2.6.0",
     "lodash": "^4.16.2"
   },
   "scripts": {
     "prod": "gulp --production",
-    "dev": "gulp watch"
+    "dev": "gulp watch",
+    "start": "gulp watch",
+    "build": "gulp build"
   },
   "keywords": [
     "rails",
     "ruby",
+    "gulp",
+    "webpack",
     "npm"
   ],
   "author": "ZeroC0D3 Lab",
