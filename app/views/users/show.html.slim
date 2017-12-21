@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Email:
+  = @user.email
+p
+  strong Password:
+  = @user.password
+p
+  strong Username:
+  = @user.username
+p
+  strong First name:
+  = @user.first_name
+p
+  strong Last name:
+  = @user.last_name
+p
+  strong Address:
+  = @user.address
+
+=> link_to 'Edit', edit_user_path(@user)
+'|
+=< link_to 'Back', users_path
