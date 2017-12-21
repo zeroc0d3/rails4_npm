@@ -16,6 +16,7 @@
 !/log/.keep
 /tmp
 /vendor/node_modules
+/node_modules
 
 /config/database.yml
 /config/secrets.yml
