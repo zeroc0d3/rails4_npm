@@ -55,7 +55,6 @@ GEM
       rails (>= 4.0.0)
     bootstrap3-datetimepicker-rails (3.1.3)
       momentjs-rails (>= 2.8.1)
-    bson (3.2.7)
     builder (3.2.3)
     byebug (9.1.0)
     capistrano (3.10.1)
@@ -168,25 +167,13 @@ GEM
     minitest (5.10.3)
     momentjs-rails (2.17.1)
       railties (>= 3.1)
-    mongoid (4.0.2)
-      activemodel (~> 4.0)
-      moped (~> 2.0.0)
-      origin (~> 2.1)
-      tzinfo (>= 0.3.37)
-    moped (2.0.7)
-      bson (~> 3.0)
-      connection_pool (~> 2.0)
-      optionable (~> 0.2.0)
     multi_json (1.12.2)
-    mysql2 (0.4.10)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    optionable (0.2.0)
-    origin (2.3.1)
-    pg (0.21.0)
+    pg (0.17.1)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -338,9 +325,7 @@ DEPENDENCIES
   kaminari
   letter_opener
   momentjs-rails (>= 2.8.1)
-  mongoid (~> 4.0.0)
-  mysql2
-  pg
+  pg (= 0.17.1)
   pry-rails
   pry-remote
   puma (= 3.11.0)

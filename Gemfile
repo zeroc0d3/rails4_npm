@@ -29,9 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'puma', '3.11.0'
 
 ### ----- ADDONS DEPENDENCIES ----- ###
-gem 'pg'
-gem 'mysql2'
-gem 'mongoid', '~> 4.0.0'
+gem 'pg', '0.17.1'
+#gem 'mysql2'
+#gem 'mongoid', '~> 4.0.0'
 
 gem 'slim-rails'
 gem 'slim'
