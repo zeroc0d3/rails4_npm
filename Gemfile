@@ -67,6 +67,8 @@ gem 'redis'
 gem 'redis-store'
 
 gem 'redis-activesupport'
+
+gem 'npm-pipeline-rails'
 ### ----- END ----- ###
 
 group :development, :test do

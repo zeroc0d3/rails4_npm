@@ -173,6 +173,9 @@ GEM
     net-ssh (4.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    npm-pipeline-rails (1.8.1)
+      railties (>= 4.0.0, < 6.0.0)
+      sprockets (~> 3.5)
     pg (0.17.1)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -325,6 +328,7 @@ DEPENDENCIES
   kaminari
   letter_opener
   momentjs-rails (>= 2.8.1)
+  npm-pipeline-rails
   pg (= 0.17.1)
   pry-rails
   pry-remote
